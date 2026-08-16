@@ -44,10 +44,10 @@ function safeUrlButton(text, url, style) {
 function mainMenuKeyboard() {
   const row1 = [safeUrlButton('🌐 WEBSITE', config.websiteUrl, 'primary'), styled(Markup.button.callback('ℹ️ ABOUT', 'menu:about'), 'primary')].filter(Boolean);
   const row2 = [
-    styled(Markup.button.callback('📢 DAILY UPDATE', 'menu:daily_update'), 'primary'),
-    safeUrlButton('💬 REQUEST GROUP', config.requestGroupUrl, 'primary'),
+    styled(Markup.button.callback('📢 DAILY UPDATE', 'menu:daily_update'), 'danger'),
+    safeUrlButton('💬 REQUEST GROUP', config.requestGroupUrl, 'danger'),
   ].filter(Boolean);
-  const row3 = [styled(Markup.button.callback('❓ HELP', 'menu:help'), 'primary')];
+  const row3 = [styled(Markup.button.callback('❓ HELP', 'menu:help'), 'success')];
 
   return Markup.inlineKeyboard([row1, row2, row3].filter((row) => row.length > 0));
 }
