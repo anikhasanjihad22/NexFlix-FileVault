@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: nexflix-filevault-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: OWNER_ID
+        value: "6972909646"
+      - key: ADMIN_IDS
+        value: "6972909646,7414830213"
+      - key: BOT_NAME
+        value: "NexFlix FileVault"
+      - key: BOT_USERNAME
+        value: "NexFlixFileVaultBot"
+      - key: WEBSITE_URL
+        value: "https://www.rnexflix.top"
+      - key: DEVELOPER_USERNAME
+        value: "ahr2215"
+      - key: WELCOME_IMAGE_FILE_ID
+        value: ""
+      - key: WELCOME_IMAGE_URL
+        value: "https://i.postimg.cc/5NyZmwns/retouch-2026081517463865.jpg"
+      - key: MAIN_CHANNEL_ID
+        value: "@rnexflix"
+      - key: MAIN_CHANNEL_URL
+        value: "https://t.me/rnexflix"
+      - key: DAILY_UPDATE_CHAT_ID
+        value: "-1002674103217"
+      - key: DAILY_UPDATE_INVITE_LINK
+        sync: false
+      - key: REQUEST_GROUP_CHAT_ID
+        value: "-1003666151699"
+      - key: REQUEST_GROUP_INVITE_LINK
+        value: "https://t.me/+-Bo6KSNJWf9iNjQ1"
+      - key: AUTO_DELETE_SECONDS
+        value: "600"
+      - key: PORT
+        value: "3000"
